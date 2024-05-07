@@ -18,7 +18,7 @@ const HomePage = () => {
       [e.target.name]: e.target.value,
     });
   };
- // https://jts-admin-nodejs.onrender.com  http://localhost:8000
+ // https://my-site-nodejs-server.onrender.com  http://localhost:8000
   // useEffect(()=>{
   //   // Your client-side code (e.g., in a React component or a separate script)
 
@@ -79,7 +79,7 @@ const HomePage = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:8000/upload", // Replace with your server URL
+        "https://my-site-nodejs-server.onrender.com/upload", // Replace with your server URL
         {
           method: "POST",
           body: formData
@@ -151,7 +151,7 @@ const HomePage = () => {
         }
 
         const response = await fetch(
-          "http://localhost:8000/send-message",
+          "https://my-site-nodejs-server.onrender.com/send-message",
           {
             method: "POST",
             headers: {
@@ -190,7 +190,7 @@ const HomePage = () => {
  
     const fetchImages = async () => {
       try {
-        const response = await fetch('http://localhost:8000/images');
+        const response = await fetch('https://my-site-nodejs-server.onrender.com/images');
         if (!response.ok) {
           throw new Error('Failed to fetch images');
         }
